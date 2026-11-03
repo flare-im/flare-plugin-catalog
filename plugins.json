@@ -1,0 +1,168 @@
+{
+  "schema": "flare.im.plugin.public-catalog.v1",
+  "catalogVersion": "2026-10-29",
+  "plugins": [
+    {
+      "id": "sdk.plugin.call",
+      "version": "0.2.0",
+      "displayName": "Flare Call Plugin",
+      "category": "flare.call",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.ai",
+      "version": "0.1.0",
+      "displayName": "Flare Local AI Plugin",
+      "category": "ai",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.redpacket",
+      "version": "0.7.7",
+      "displayName": "Flare Red Packet Plugin",
+      "category": "flare.redpacket",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.poll",
+      "version": "0.2.0",
+      "displayName": "Flare Poll Plugin",
+      "category": "flare.poll",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.solitaire",
+      "version": "0.1.1",
+      "displayName": "Flare Solitaire Plugin",
+      "category": "flare.solitaire",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.task",
+      "version": "0.1.0",
+      "displayName": "Flare Task Plugin",
+      "category": "flare.task",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.schedule",
+      "version": "0.1.1",
+      "displayName": "Flare Schedule Plugin",
+      "category": "flare.schedule",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.announcement",
+      "version": "0.1.0",
+      "displayName": "Flare Announcement Plugin",
+      "category": "flare.announcement",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.wallet",
+      "version": "0.1.9",
+      "displayName": "Flare Wallet Plugin",
+      "category": "flare.wallet",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    }
+  ]
+}
