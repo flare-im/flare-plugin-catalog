@@ -1,6 +1,6 @@
 {
   "schema": "flare.im.plugin.public-catalog.v1",
-  "catalogVersion": "2026-10-29",
+  "catalogVersion": "2026-11-08",
   "plugins": [
     {
       "id": "sdk.plugin.call",
@@ -94,7 +94,7 @@
     },
     {
       "id": "sdk.plugin.task",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "displayName": "Flare Task Plugin",
       "category": "flare.task",
       "distribution": "composition-time",
@@ -148,9 +148,27 @@
     },
     {
       "id": "sdk.plugin.wallet",
-      "version": "0.1.9",
+      "version": "0.2.0",
       "displayName": "Flare Wallet Plugin",
       "category": "flare.wallet",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
+    },
+    {
+      "id": "sdk.plugin.checkin",
+      "version": "0.1.0",
+      "displayName": "Flare Check-in Plugin",
+      "category": "flare.checkin",
       "distribution": "composition-time",
       "runtimeInstall": "not-supported",
       "platforms": [
