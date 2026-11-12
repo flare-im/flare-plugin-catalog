@@ -28,3 +28,42 @@ jobs:
             )
             and ([.plugins[].id] | length == (unique | length))
           ' plugins.json
+  sources:
+    name: Versions match the plugin manifests
+    # Fork pull requests cannot read the private plugin sources.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      HAS_REPO_TOKEN: ${{ secrets.FLARE_REPO_TOKEN != '' }}
+    steps:
+      - name: Note a missing source token
+        if: env.HAS_REPO_TOKEN != 'true'
+        run: echo "::notice::FLARE_REPO_TOKEN is not set; the comparison with the plugin manifests is skipped."
+      - uses: actions/checkout@v4
+        if: env.HAS_REPO_TOKEN == 'true'
+        with:
+          path: flare-plugin-catalog
+          persist-credentials: false
+      - name: Check out the plugin sources
+        if: env.HAS_REPO_TOKEN == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: flare-im/flare-plugins-commercial
+          ref: ${{ github.base_ref || github.ref_name }}
+          token: ${{ secrets.FLARE_REPO_TOKEN }}
+          path: flare-plugins-commercial
+          persist-credentials: false
+      - name: Check out the Call plugin manifest
+        if: env.HAS_REPO_TOKEN == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: flare-im/flare-plugin-call
+          ref: ${{ github.base_ref || github.ref_name }}
+          token: ${{ secrets.FLARE_REPO_TOKEN }}
+          path: flare-plugin-call
+          persist-credentials: false
+      - name: Compare the public catalog with the manifests
+        if: env.HAS_REPO_TOKEN == 'true'
+        run: |
+          python3 flare-plugins-commercial/scripts/catalog_sync.py --check --public-only \
+            --workspace "$GITHUB_WORKSPACE"
