@@ -1,6 +1,6 @@
 {
   "schema": "flare.im.plugin.public-catalog.v1",
-  "catalogVersion": "2026-11-12",
+  "catalogVersion": "2026-11-13",
   "plugins": [
     {
       "id": "sdk.plugin.call",
