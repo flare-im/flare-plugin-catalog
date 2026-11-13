@@ -94,7 +94,7 @@
     },
     {
       "id": "sdk.plugin.task",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "displayName": "Flare Task Plugin",
       "category": "flare.task",
       "distribution": "composition-time",
