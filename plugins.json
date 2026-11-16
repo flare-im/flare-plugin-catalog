@@ -1,10 +1,10 @@
 {
   "schema": "flare.im.plugin.public-catalog.v1",
-  "catalogVersion": "2026-11-08",
+  "catalogVersion": "2026-11-13",
   "plugins": [
     {
       "id": "sdk.plugin.call",
-      "version": "0.2.0",
+      "version": "0.3.4",
       "displayName": "Flare Call Plugin",
       "category": "flare.call",
       "distribution": "composition-time",
@@ -40,7 +40,7 @@
     },
     {
       "id": "sdk.plugin.redpacket",
-      "version": "0.7.7",
+      "version": "0.9.0",
       "displayName": "Flare Red Packet Plugin",
       "category": "flare.redpacket",
       "distribution": "composition-time",
@@ -58,7 +58,7 @@
     },
     {
       "id": "sdk.plugin.poll",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "displayName": "Flare Poll Plugin",
       "category": "flare.poll",
       "distribution": "composition-time",
@@ -76,7 +76,7 @@
     },
     {
       "id": "sdk.plugin.solitaire",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "displayName": "Flare Solitaire Plugin",
       "category": "flare.solitaire",
       "distribution": "composition-time",
@@ -94,7 +94,7 @@
     },
     {
       "id": "sdk.plugin.task",
-      "version": "0.1.1",
+      "version": "0.1.3",
       "displayName": "Flare Task Plugin",
       "category": "flare.task",
       "distribution": "composition-time",
@@ -112,7 +112,7 @@
     },
     {
       "id": "sdk.plugin.schedule",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "displayName": "Flare Schedule Plugin",
       "category": "flare.schedule",
       "distribution": "composition-time",
@@ -130,7 +130,7 @@
     },
     {
       "id": "sdk.plugin.announcement",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "displayName": "Flare Announcement Plugin",
       "category": "flare.announcement",
       "distribution": "composition-time",
@@ -148,7 +148,7 @@
     },
     {
       "id": "sdk.plugin.wallet",
-      "version": "0.2.0",
+      "version": "0.6.0",
       "displayName": "Flare Wallet Plugin",
       "category": "flare.wallet",
       "distribution": "composition-time",

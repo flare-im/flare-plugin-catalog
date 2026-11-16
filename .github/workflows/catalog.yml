@@ -28,3 +28,52 @@ jobs:
             )
             and ([.plugins[].id] | length == (unique | length))
           ' plugins.json
+  sources:
+    name: Versions match the plugin manifests
+    # Fork pull requests cannot read the private plugin sources. The
+    # comparison needs the FLARE_REPO_TOKEN secret, a token that reads
+    # flare-plugins-commercial and flare-plugin-call; without it the job only
+    # notes that it was skipped.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      HAS_REPO_TOKEN: ${{ secrets.FLARE_REPO_TOKEN != '' }}
+    steps:
+      - name: Note a missing source token
+        if: env.HAS_REPO_TOKEN != 'true'
+        run: echo "::notice::FLARE_REPO_TOKEN is not set; the comparison with the plugin manifests is skipped."
+      - uses: actions/checkout@v4
+        if: env.HAS_REPO_TOKEN == 'true'
+        with:
+          path: flare-plugin-catalog
+          persist-credentials: false
+      - name: Check out the plugin sources and the Call plugin manifest
+        if: env.HAS_REPO_TOKEN == 'true'
+        env:
+          BRANCH: ${{ github.base_ref || github.ref_name }}
+          TOKEN: ${{ secrets.FLARE_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          # A branch may exist in this repository only: each sibling is read
+          # at the same branch when it has one, else at dev.
+          fetch() {
+            local repo=$1 url="https://github.com/flare-im/$1.git"
+            if [ "$2" = private ]; then
+              url="https://x-access-token:${TOKEN}@github.com/flare-im/$1.git"
+            fi
+            for ref in "$BRANCH" dev; do
+              if git clone --quiet --depth 1 --branch "$ref" "$url" "$repo" 2>/dev/null; then
+                echo "$repo at $ref"
+                return 0
+              fi
+            done
+            echo "::error::$repo has neither $BRANCH nor dev"
+            return 1
+          }
+          fetch flare-plugins-commercial private
+          fetch flare-plugin-call private
+      - name: Compare the public catalog with the manifests
+        if: env.HAS_REPO_TOKEN == 'true'
+        run: |
+          python3 flare-plugins-commercial/scripts/catalog_sync.py --check --public-only \
+            --workspace "$GITHUB_WORKSPACE"
