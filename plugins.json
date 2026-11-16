@@ -181,6 +181,24 @@
         "harmonyos-arkts",
         "cangjie"
       ]
+    },
+    {
+      "id": "sdk.plugin.mission",
+      "version": "0.1.0",
+      "displayName": "Flare Mission Center",
+      "category": "flare.mission",
+      "distribution": "composition-time",
+      "runtimeInstall": "not-supported",
+      "platforms": [
+        "android",
+        "ios",
+        "flutter",
+        "typescript-web",
+        "typescript-node",
+        "electron",
+        "harmonyos-arkts",
+        "cangjie"
+      ]
     }
   ]
 }
