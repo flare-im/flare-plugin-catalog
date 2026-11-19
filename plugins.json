@@ -184,7 +184,7 @@
     },
     {
       "id": "sdk.plugin.mission",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "displayName": "Flare Mission Center",
       "category": "flare.mission",
       "distribution": "composition-time",
