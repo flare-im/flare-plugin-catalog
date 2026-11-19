@@ -1,6 +1,6 @@
 {
   "schema": "flare.im.plugin.public-catalog.v1",
-  "catalogVersion": "2026-11-13",
+  "catalogVersion": "2026-11-19",
   "plugins": [
     {
       "id": "sdk.plugin.call",
@@ -184,7 +184,7 @@
     },
     {
       "id": "sdk.plugin.mission",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "displayName": "Flare Mission Center",
       "category": "flare.mission",
       "distribution": "composition-time",
