@@ -40,7 +40,7 @@
     },
     {
       "id": "sdk.plugin.redpacket",
-      "version": "0.9.0",
+      "version": "0.9.6",
       "displayName": "Flare Red Packet Plugin",
       "category": "flare.redpacket",
       "distribution": "composition-time",
@@ -58,7 +58,7 @@
     },
     {
       "id": "sdk.plugin.poll",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "displayName": "Flare Poll Plugin",
       "category": "flare.poll",
       "distribution": "composition-time",
@@ -112,7 +112,7 @@
     },
     {
       "id": "sdk.plugin.schedule",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "displayName": "Flare Schedule Plugin",
       "category": "flare.schedule",
       "distribution": "composition-time",
@@ -148,7 +148,7 @@
     },
     {
       "id": "sdk.plugin.wallet",
-      "version": "0.6.0",
+      "version": "0.6.11",
       "displayName": "Flare Wallet Plugin",
       "category": "flare.wallet",
       "distribution": "composition-time",
@@ -166,7 +166,7 @@
     },
     {
       "id": "sdk.plugin.checkin",
-      "version": "0.1.0",
+      "version": "0.1.9",
       "displayName": "Flare Check-in Plugin",
       "category": "flare.checkin",
       "distribution": "composition-time",
@@ -184,7 +184,7 @@
     },
     {
       "id": "sdk.plugin.mission",
-      "version": "0.2.2",
+      "version": "0.3.3",
       "displayName": "Flare Mission Center",
       "category": "flare.mission",
       "distribution": "composition-time",
